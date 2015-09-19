@@ -8,6 +8,7 @@ STATSDIR="/var/run/postgresql/9.4-main.pg_stat_tmp"
 
 # creat stats tmp dir
 mkdir -p $STATSDIR
+chown -R postgres $STATSDIR
 
 # test if DATADIR is existent
 if [ ! -d $DATADIR ]; then
